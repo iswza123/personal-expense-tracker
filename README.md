@@ -66,8 +66,8 @@ personal_expense_tracker/
 ### 1. Clone the repository
 
 ```bash
-git clone YOUR_GITHUB_REPOSITORY_URL
-cd personal_expense_tracker
+git clone https://github.com/iswza123/personal-expense-tracker.git
+cd personal-expense-tracker
 ```
 
 ### 2. Create a virtual environment
