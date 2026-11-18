@@ -1,0 +1,28 @@
+# Python
+__pycache__/
+*.py[cod]
+*.log
+
+# Django database
+db.sqlite3
+*.sqlite3
+
+# Virtual environments
+venv/
+.venv/
+env/
+
+# Environment variables and secrets
+.env
+.env.*
+!.env.example
+
+# Generated files
+staticfiles/
+media/
+
+# Mac
+.DS_Store
+
+# Private Django settings
+config/local_settings.py

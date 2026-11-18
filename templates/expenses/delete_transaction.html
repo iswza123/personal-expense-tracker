@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Delete Transaction</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f4f6f9;
+            padding: 30px;
+
+        .container {
+            max-width: 500px;
+            margin: 80px auto;
+            background: white;
+            padding: 30px;
+            border-radius: 12px;
+            text-align: center;
+            box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+        }
+
+        h1 {
+            color: #dc2626;
+        }
+
+        button {
+            background: #dc2626;
+            color: white;
+            border: none;
+            padding: 12px 25px;
+            border-radius: 6px;
+            cursor: pointer;
+        }
+
+        .cancel {
+            display: inline-block;
+            margin-left: 10px;
+            padding: 12px 25px;
+            background: #64748b;
+            color: white;
+            text-decoration: none;
+            border-radius: 6px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Delete Transaction?</h1>
+
+        <p>
+            Are you sure you want to delete
+            <strong>{{ transaction.title }}</strong>?
+        </p>
+
+        <form method="POST">
+            {% csrf_token %}
+            <button type="submit">Yes, Delete</button>
+
+            <a href="{% url 'dashboard' %}" class="cancel">
+                Cancel
+            </a>
+        </form>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register - Personal Expense Tracker</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f4f6f9;
+            margin: 0;
+            padding: 25px;
+        }
+        .auth-card {
+            max-width: 440px;
+            margin: 45px auto;
+            background: white;
+            padding: 35px;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0,0,0,.08);
+        }
+        h1 { text-align: center; color: #26344a; }
+        .subtitle { text-align: center; color: #666; }
+        form p { margin-bottom: 16px; }
+        label { display: block; margin-bottom: 5px; }
+        input {
+            width: 100%;
+            box-sizing: border-box;
+            padding: 12px;
+            margin-top: 7px;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+        }
+        button {
+            width: 100%;
+            padding: 13px;
+            background: #5470c6;
+            color: white;
+            border: 0;
+            border-radius: 7px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        .helptext { display: block; color: #777; font-size: 12px; }
+        .auth-link { text-align: center; margin-top: 22px; }
+        a { color: #5470c6; text-decoration: none; }
+        .errorlist { color: #d93025; font-size: 13px; }
+    </style>
+</head>
+<body>
+<div class="auth-card">
+    <h1>Create Account</h1>
+    <p class="subtitle">Start managing your income and expenses</p>
+
+    <form method="POST">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Register</button>
+    </form>
+
+    <div class="auth-link">
+        Already have an account?
+        <a href="{% url 'login' %}">Login</a>
+    </div>
+</div>
+</body>
+</html>
